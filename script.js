@@ -7,17 +7,37 @@ const images = [
 
 const information = document.querySelector('.info');
 const renderInfo = ()=>{
+    const text = "Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar."
+    const button = 'Learn More';
     const leftContainer = document.createElement('div');
     leftContainer.classList.add('leftContainer');
     leftContainer.innerHTML = `
     <h1>Make <br> remote work</h1>
-    <p>Get your team in sync, no matter your location. Streamline processes, 
-     create team rituals, and watch productivity soar.</p>
-     <input type="button" value="Learn More" class="infoBtn">
+    <p>${text}</p>
+     <input type="button" value="${button}" class="infoBtn">
      <div class="images">
      ${images.map(img => `<img src="${img}">`).join('')}
      </div>
     `
     information.appendChild(leftContainer);
+    const rightContainer = document.createElement('div');
+    rightContainer.classList.add('rightContainer');
+    information.appendChild(rightContainer);
+    information.appendChild(leftContainer);
 }
 renderInfo();
+
+const attribution = document.querySelector('.attribution');
+const attributionRender = ()=>{
+    const name = "Xolile";
+    const surname = "Nxiweni";
+    const href = "https://xoli-nxiweni.github.io/BootcampLesson1/";
+    const attr = document.createElement('p');
+    attr.innerHTML =`
+    <p>Bootcamp 2024 by
+    <a href="https://www.mlab.co.za" target="_blank">CodeTribe</a>. Developed
+    by  <a href="${href}">${name} ${surname}</a>.</p>
+    `
+    attribution.appendChild(attr);
+}
+attributionRender();
