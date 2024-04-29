@@ -207,7 +207,7 @@ button:last-child{
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
-    padding: 15px 5% 10px 15%;
+    padding: 15px 15% 10px 15%;
     gap: 100px;
     height: 98vh;
 }
