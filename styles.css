@@ -1,0 +1,310 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    /* background: rgb(155, 87, 87); */
+}
+::selection{
+    color: #fff;
+    background: #8e8e8e;
+}
+header{
+    position: fixed;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 15px 5%;
+    background: #fff;
+}
+.logo{
+    padding: 0;
+}
+.logo img{
+    /* width: 50px; */
+    align-self: center;
+    
+}
+.navigation{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 0 0 55px;
+    background: transparent;
+}
+/* dropdown-Styling */
+select{
+    border: 0;
+}
+select:focus{
+    outline: none;
+}
+.dropdown-toggle {
+    display: none;
+}
+.dropdown-label {
+    display: block;
+    cursor: pointer;
+    /* padding: 8px; */
+    /* width: 150px; */
+}
+ul.dropdown-list{
+    padding: 10px;
+    width: auto;
+}
+.dropdown-list {
+    display: none;
+    position: absolute;
+    left: 13%;
+    /* z-index: 1; */
+    background-color: #ffffff;
+    list-style-type: none;
+    transition: all .4s ease-in-out;
+    box-shadow: 0 0 5px 0 black;
+}
+.dropdown-item {
+    padding: 8px;
+    cursor: pointer;
+    text-align: left;
+    transition: background-color 0.2s ease;
+}
+.dropdown-item:hover {
+    background-color: #e0e0e0;
+}
+.dropdown-toggle:checked + .dropdown-label + .list1 {
+    display: block;
+}
+
+/* //////////////////// */
+.links{
+    display: flex;
+    align-items: center;
+    background: transparent;
+}
+.links li{
+    padding: 0 10px;
+    background: transparent;
+}
+.links li a{
+    color: #000;
+    font-size: 0.9em;
+    background-color: transparent;
+}
+li .btns{
+    display: flex;
+    justify-content: space-between;
+    background: transparent;
+
+    
+}
+li .buttons{
+    background: transparent;
+}
+#navigationToggle {
+    display: none;
+}
+
+.toggleBar {
+    display: none;
+    cursor: pointer;
+    z-index: 9;
+    background-color: transparent;
+}
+
+button{
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    margin: 0 20px;
+}
+button:last-child{
+    border: 2px solid #000;
+    background: transparent;
+}
+
+.bar {
+
+    width: 30px;
+    height: 3px;
+    background: #000;
+    border-radius: 5px;
+    margin: 5px;
+    transition: all .4s ease-in-out;
+}
+.btns-hide{
+    display: none;
+}
+.btns-show{
+    display: block;
+}
+
+@media (max-width: 767px) {
+    .navigation{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+    }
+    .toggleBar {
+        display: block;
+        cursor: pointer;
+    }
+    #navigationToggle:checked ~ .toggleBar .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+    #navigationToggle:checked ~ .toggleBar .bar:nth-child(2) {
+        opacity: 0;
+    }
+    #navigationToggle:checked ~ .toggleBar .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+    nav{
+        flex-direction: column;
+    }
+        nav .links{
+        float: none;
+        position: fixed;
+        display: none;
+        z-index: 9;
+        right: -300px;
+        left: 101%;
+        top: 0;
+        padding: 20px;
+        bottom: 0px;
+        width: 250px;
+        height: auto;
+        flex-direction: column;
+        justify-content: space-evenly;
+        background: rgb(248, 248, 248);
+        overflow: hidden;
+        box-sizing: border-box;
+        transition: all .4s ease-in;
+        align-items: center;
+        box-shadow: 0 0 10px #656565;
+    }
+    #navigationToggle:checked ~ nav .links{
+        right: 0;
+    }
+    li .btns{
+        display: flex;
+        flex-direction: column;
+    }
+    .btns-hide{
+        display: block;
+    }
+    .btns-show{
+        display: none;
+    }
+
+}
+
+.info{
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    padding: 15px 5% 10px 15%;
+    gap: 100px;
+    height: 98vh;
+}
+.leftContainer{
+    padding: 0 15px 0 0;
+}
+.leftContainer h1{
+    font-size: 4em;
+    /* padding: 15px 0; */
+}
+.leftContainer p{
+    color: rgb(84, 84, 84);
+    padding: 30px 26% 40px 0;
+}
+.infoBtn{
+    padding: 10px 20px;
+    border-radius: 10px;
+    background-color: transparent;
+    border: 2px solid #000;
+    background: #000;
+    color: #fff;
+    font-size: 1em;
+    transition: all .4s ease-in-out;
+    cursor: pointer;
+    margin: 0 0 25px 0;
+}
+.infoBtn:hover{
+    background: transparent;
+    color: #000;
+}
+.images{
+    margin: 10px 0 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.images img{
+    width: 75px;
+}
+.rightContainer{
+    background: url(/Assets/Images/image-hero-desktop.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size :contain;
+    width: 360px;
+    height: 500px;
+}
+.rightContainer{
+    padding: 200px;
+}
+
+.attribution{ 
+    /* position: absolute; */
+    bottom: 5px;
+    left: 0;
+    right: 0;
+    font-size: 11px; 
+    text-align: center; 
+}
+.attribution a{ 
+    color: #3e52a3; 
+}
+@media (max-width: 767px) {
+    .info{
+        flex-direction: column-reverse;
+        height: auto;
+        text-align: center;
+        gap: 0;
+        padding: 25% 0 0 0;
+    }
+    .leftContainer{
+        padding: 20px;
+    }
+    .leftContainer p{
+        padding: 10px 0;
+    }
+    .leftContainer h1{
+        font-size: 1.5em;
+        padding: 0;
+    }
+    .rightContainer{
+        background: url(/Assets/Images/image-hero-mobile.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:contain;
+        height: 50vh;
+        
+    }
+    
+}
+@media (max-width:330px) {
+    .rightContainer{
+        background: url(/Assets/Images/image-hero-mobile.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size:cover;
+        height: 50vh;
+        
+    }
+}
