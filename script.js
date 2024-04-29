@@ -1,8 +1,8 @@
 const images = [
-    '/Assets/Images/client-databiz.svg',
-    '/Assets/Images/client-audiophile.svg',
-    '/Assets/Images/client-meet.svg',
-    '/Assets/Images/client-maker.svg',
+    'Assets/Images/client-databiz.svg',
+    'Assets/Images/client-audiophile.svg',
+    'Assets/Images/client-meet.svg',
+    'Assets/Images/client-maker.svg',
 ]
 
 const information = document.querySelector('.info');

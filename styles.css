@@ -248,7 +248,7 @@ button:last-child{
     width: 75px;
 }
 .rightContainer{
-    background: url(/Assets/Images/image-hero-desktop.png);
+    background: url(Assets/Images/image-hero-desktop.png);
     background-position: center;
     background-repeat: no-repeat;
     background-size :contain;
@@ -289,7 +289,7 @@ button:last-child{
         padding: 0;
     }
     .rightContainer{
-        background: url(/Assets/Images/image-hero-mobile.png);
+        background: url(Assets/Images/image-hero-mobile.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size:contain;
@@ -300,7 +300,7 @@ button:last-child{
 }
 @media (max-width:330px) {
     .rightContainer{
-        background: url(/Assets/Images/image-hero-mobile.png);
+        background: url(Assets/Images/image-hero-mobile.png);
         background-position: center;
         background-repeat: no-repeat;
         background-size:cover;
