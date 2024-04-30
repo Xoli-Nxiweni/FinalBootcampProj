@@ -182,13 +182,11 @@ button:last-child{
     nav{
         flex-direction: column;
     }
-        nav .links{
-        float: none;
+        .links{
         position: fixed;
-        display: none;
         z-index: 9;
-        right: -300px;
-        left: 101%;
+        right: 0;
+        display: none;
         top: 0;
         padding: 20px;
         bottom: 0px;
@@ -202,9 +200,6 @@ button:last-child{
         transition: all .4s ease-in;
         align-items: center;
         box-shadow: 0 0 10px #656565;
-    }
-    #navigationToggle:checked ~ nav .links{
-        right: 0;
     }
     li .btns{
         display: flex;
@@ -310,7 +305,7 @@ button:last-child{
         background-repeat: no-repeat;
         background-size:contain;
         height: 50vh;
-        
+        width: auto;
     }
     
 }

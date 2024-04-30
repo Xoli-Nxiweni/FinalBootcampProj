@@ -13,52 +13,55 @@
 
 <body>
   <header class="header">
-    <div class="logo"><a href="#"><img src="Assets/Images/logo.svg"></a></div>
-      <nav class="navigation">
+    <div class="logo">
+        <a href="#"><img src="Assets/Images/logo.svg" alt="Logo"></a>
+    </div>
+    <nav class="navigation">
         <ul class="links">
-          <li>
-            <div class="dropdown">
-              <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
-              <label for="dropdown-toggle" class="dropdown-label">Features <img src="Assets/Images/icon-arrow-down.svg" alt=""></label>
-              <ul class="dropdown-list list1">
-                  <li class="dropdown-item"><img src="Assets/Images/icon-todo.svg" alt=""> Todo List</li>
-                  <li class="dropdown-item"><img src="Assets/Images/icon-calendar.svg" alt=""> Calendar</li>
-                  <li class="dropdown-item"><img src="Assets/Images/icon-reminders.svg" alt=""> Reminders</li>
-                  <li class="dropdown-item"><img src="Assets/Images/icon-planning.svg" alt=""> Planning</li>
-              </ul>
-          </div>
-          </li>
-          <li>
-            <div class="dropdown">
-              <select name="dropdownList" id="">
-                <option value="">Company</option>
-                <option value="">History</option>
-                <option value="">Our Team</option>
-                <option value="">Blog</option>
-              </select>
-          </div>
-          </li>
+            <li>
+                <div class="dropdown">
+                    <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
+                    <label for="dropdown-toggle" class="dropdown-label">Features <img src="Assets/Images/icon-arrow-down.svg" alt=""></label>
+                    <ul class="dropdown-list list1">
+                        <li class="dropdown-item"><img src="Assets/Images/icon-todo.svg" alt=""> Todo List</li>
+                        <li class="dropdown-item"><img src="Assets/Images/icon-calendar.svg" alt=""> Calendar</li>
+                        <li class="dropdown-item"><img src="Assets/Images/icon-reminders.svg" alt=""> Reminders</li>
+                        <li class="dropdown-item"><img src="Assets/Images/icon-planning.svg" alt=""> Planning</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="dropdown">
+                    <select name="dropdownList" id="dropdownList">
+                        <option value="">Company</option>
+                        <option value="">History</option>
+                        <option value="">Our Team</option>
+                        <option value="">Blog</option>
+                    </select>
+                </div>
+            </li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">About</a></li>
             <li class="buttons">
-              <div class="btns-hide">
-                <button type="button" class="btn" id="btn">Login</button>
-                <button type="button" class="btn" id="btn">Register</button>
-              </div>
+                <div class="btns-hide">
+                    <button type="button" class="btn btn-login">Login</button>
+                    <button type="button" class="btn btn-register">Register</button>
+                </div>
             </li>
         </ul>
         <div class="btns btns-show">
-          <button type="button" class="btn" id="btn">Login</button>
-          <button type="button" class="btn" id="btn">Register</button>
+            <button type="button" class="btn btn-login">Login</button>
+            <button type="button" class="btn btn-register">Register</button>
         </div>
-      </nav>
-      <input type="checkbox" id="navigationToggle">
-          <label for="navigationToggle" class="toggleBar">
-              <div class="bar"></div>
-              <div class="bar"></div>
-              <div class="bar"></div>
-          </label>
-  </header>
+    </nav>
+    <input type="checkbox" id="navigationToggle">
+    <label for="navigationToggle" class="toggleBar">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+    </label>
+</header>
+
 
   <section class="info">
     <!-- info rendered using JS -->
@@ -84,6 +87,10 @@
 </div>
 </body>
 <script src="script.js"></script>
+<script>
+
+
+</script>
 </html>
 
 <!-- Source Frontend Mentor: https://www.frontendmentor.io -->

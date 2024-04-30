@@ -4,7 +4,6 @@ const images = [
     'Assets/Images/client-meet.svg',
     'Assets/Images/client-maker.svg',
 ]
-
 const information = document.querySelector('.info');
 const renderInfo = ()=>{
     const text = "Get your team in sync, no matter your location. Streamline processes, create team rituals, and watch productivity soar."
@@ -19,7 +18,6 @@ const renderInfo = ()=>{
      ${images.map(img => `<img src="${img}">`).join('')}
      </div>
     `
-    information.appendChild(leftContainer);
     const rightContainer = document.createElement('div');
     rightContainer.classList.add('rightContainer');
     information.appendChild(rightContainer);
@@ -41,3 +39,19 @@ const attributionRender = ()=>{
     attribution.appendChild(attr);
 }
 attributionRender();
+
+// const toggleBtn = document.getElementById('navigationToggle');
+// let linksMenu = document.querySelector('.links');
+
+// toggleBtn.addEventListener('click', () => {
+//     if (linksMenu.style.display === 'block') {
+//         linksMenu.style.display = 'none';
+//     } else {
+//         linksMenu.style.display = 'block';
+//     }
+// });
+
+const notification = document.getElementById('navigationToggle');
+notification.addEventListener('click', ()=>{
+    alert("NAVIGATION UNDER CONSTRUCTION")
+});
