@@ -186,7 +186,7 @@ button:last-child{
         position: fixed;
         z-index: 9;
         right: 0;
-        display: none;
+        right: -100%;
         top: 0;
         padding: 20px;
         bottom: 0px;

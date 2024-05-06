@@ -51,7 +51,13 @@ attributionRender();
 //     }
 // });
 
-const notification = document.getElementById('navigationToggle');
-notification.addEventListener('click', ()=>{
-    alert("NAVIGATION UNDER CONSTRUCTION")
-});
+const toggleMenu = document.getElementById('navigationToggle');
+        const menu = document.querySelector('.links');
+
+        toggleMenu.addEventListener('change', function () {
+            if (this.checked) {
+                menu.style.right = '0';
+            } else {
+                menu.style.right = '-100%';
+            }
+        });
