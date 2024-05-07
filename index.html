@@ -20,9 +20,9 @@
         <ul class="links">
             <li>
                 <div class="dropdown">
-                    <input type="checkbox" id="dropdown-toggle" class="dropdown-toggle">
-                    <label for="dropdown-toggle" class="dropdown-label">Features <img src="Assets/Images/icon-arrow-down.svg" alt=""></label>
-                    <ul class="dropdown-list list1">
+                    <input type="checkbox" id="dropdown-toggle-1" class="dropdown-toggle">
+                    <label for="dropdown-toggle-1" class="dropdown-label">Features <img src="./Assets/Images/icon-arrow-down.svg"></label>
+                    <ul class="dropdown-list">
                         <li class="dropdown-item"><img src="Assets/Images/icon-todo.svg" alt=""> Todo List</li>
                         <li class="dropdown-item"><img src="Assets/Images/icon-calendar.svg" alt=""> Calendar</li>
                         <li class="dropdown-item"><img src="Assets/Images/icon-reminders.svg" alt=""> Reminders</li>
@@ -32,13 +32,24 @@
             </li>
             <li>
                 <div class="dropdown">
+                    <input type="checkbox" id="dropdown-toggle-2" class="dropdown-toggle">
+                    <label for="dropdown-toggle-2" class="dropdown-label">Company <img src="./Assets/Images/icon-arrow-down.svg"></label>
+                    <ul class="dropdown-list">
+                        <li class="dropdown-item">History</li>
+                        <li class="dropdown-item">Our Team</li>
+                        <li class="dropdown-item">Blog</li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <!-- <div class="dropdown">
                     <select name="dropdownList" id="dropdownList">
                         <option value="">Company</option>
                         <option value="">History</option>
                         <option value="">Our Team</option>
                         <option value="">Blog</option>
                     </select>
-                </div>
+                </div> -->
             </li>
             <li><a href="#">Careers</a></li>
             <li><a href="#">About</a></li>
@@ -88,7 +99,26 @@
 </body>
 <script src="script.js"></script>
 <script>
+// JavaScript to toggle dropdown visibility
+        document.addEventListener("DOMContentLoaded", () => {
+            const dropdownToggles = document.querySelectorAll(".dropdown-toggle");
 
+            dropdownToggles.forEach((toggle) => {
+                toggle.addEventListener("click", (e) => {
+                    const dropdownList = e.target.nextElementSibling.nextElementSibling;
+                    dropdownList.classList.toggle("show");
+                });
+            });
+
+            // Close dropdowns when clicking outside
+            document.addEventListener("click", (e) => {
+                if (!e.target.matches(".dropdown-toggle") && !e.target.closest(".dropdown")) {
+                    document.querySelectorAll(".dropdown-list").forEach((list) => {
+                        list.classList.remove("show");
+                    });
+                }
+            });
+        });
 
 </script>
 </html>
